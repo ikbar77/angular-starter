@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:8.11-alpine' 
-            args '-p 80:8080' 
+            dockerfile true
         }
     }
     environment {
@@ -11,7 +10,6 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'npm -g config set user root'
 		sh 'npm install -g @angular/cli'
 		sh 'npm install -g angular-http-server'
                 sh 'npm install'
