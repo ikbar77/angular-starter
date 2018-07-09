@@ -11,8 +11,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'npm install -g @angular/cli'
-		sh 'npm install -g angular-http-server'
+		sh 'npm install -g @angular/cli --unsafe-perm'
+		sh 'npm install -g angular-http-server --unsafe-perm'
                 sh 'npm install'
             }
         }
