@@ -13,4 +13,4 @@ RUN apk update \
 #Angular CLI
 RUN npm install -g @angular/cli
 RUN npm install -g angular-http-server
-EXPOSE 80
+EXPOSE 8080

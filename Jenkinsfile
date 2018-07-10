@@ -15,10 +15,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                // sh './jenkins/scripts/deliver.sh'
-		sh 'ng build --prod'
-		sh 'angular-http-server --path dist/angular-starter'
+                sh './jenkins/scripts/deploy.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
             }
         }
     }
