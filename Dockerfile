@@ -1,4 +1,4 @@
-FROM node:8.11-alpine as node-angular-cli
+FROM node:8.11-alpine
 
 LABEL authors="John Papa"
 
