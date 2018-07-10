@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            args '-p 80:80'
+            args '-p 80:8080'
         }
     }
     environment {
